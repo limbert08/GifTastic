@@ -63,7 +63,13 @@ $(document).ready(function() {
 
                     $("#cars").append(carDiv);
                 }
-            });
+            })
+
+            .fail(function() {
+                alert( "Error with Giphy Ajax Call, please check your URL string" );
+            
+            });  // ; for .done & .fail
+   
     });
 
     $(document).on("click", ".car-image", function() {
